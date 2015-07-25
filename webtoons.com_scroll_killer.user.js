@@ -7,5 +7,17 @@
 // @grant        none
 // ==/UserScript==
 
-movePrevious=function(){}
-moveNext=function(){}
+function copyFunction(source) {
+  var script = document.createElement('script');
+  script.setAttribute("type", "application/javascript");
+  script.textContent = "" + source;
+
+  document.body.appendChild(script);
+  document.body.removeChild(script);
+}
+
+function movePrevious(){}
+function moveNext(){}
+
+copyFunction(movePrevious);
+copyFunction(moveNext);
